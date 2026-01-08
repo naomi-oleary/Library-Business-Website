@@ -6,6 +6,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/3c6e5905fc.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 <body>
     <section id="landing">
@@ -17,6 +18,25 @@
                     <li><a href="#" class="nav__link">Contact</a></li>
                     <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#features" class="menu__link" onclick="closeMenu()">Books</a>
+                        </li>
+                        <li class="menu__list">
+                            <a class="menu__link no-cursor" onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <header>
@@ -24,7 +44,9 @@
                 <div class="header__description">
                     <h1>America's most awarded online library platform</h1>
                     <h2>Find your dream read with <span class="text--color">Library</span></h2>
-                    <button class="btn">Browse Books</button>
+                    <a href="#features">
+                        <button class="btn">Browse Books</button>
+                    </a>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./assets/Undraw_Books.svg" alt="">
@@ -316,7 +338,9 @@
                     <h2 class="section__title">
                         Explore more <span class="text--color">Books</span>
                     </h2>
+                    <a href="#features">
                     <button class="btn">Browse Books</button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -324,7 +348,7 @@
 
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row row__column">
                 <a href="#">
                     <figure class="footer__logo">
                         <img src="./assets/Library.svg" alt="" class="footer__logo--img">
@@ -336,9 +360,9 @@
                     <a href="" class="footer__link">Books</a>
                     <a href="" class="footer__link no-cursor">Contact</a>
                 </div>
+                <div class="footer__copyright">Copyright &copy; 2021 Library</div>
             </div>
         </div>
-        <div class="footer__copyright">Copyright &copy;</div>
     </footer>
 </body>
 </html>
